@@ -28,7 +28,7 @@ subgraph MiddlewareLayer["Middleware Layer"]
 end
 
 subgraph backendLayer["backend Layer"]
-    backend_ai["AI Model Service"]
+    backend_ai["AI API Services"]
     backend_db["Database"]
 end
 
