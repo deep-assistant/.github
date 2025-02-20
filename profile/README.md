@@ -14,14 +14,14 @@ The following diagram illustrates how our applications interact with each other 
 graph TB
 
 subgraph UserLayer["User Layer"]
-    user_vk["VK Users"]
-    user_tele["Telegram Users"]
     direct_api_users["Direct API Users"]
+    user_tele["Telegram Users"]
+    user_vk["VK Users"]
 end
 
 subgraph ApplicationLayer["Application Layer"]
-    app_gptutor["GPTutor (React, Typescript)"]
     app_telebot["telegram-bot (Python)"]
+    app_gptutor["GPTutor (React, Typescript)"]
 end
 
 subgraph MiddlewareLayer["Middleware Layer"]
@@ -33,11 +33,11 @@ subgraph backendLayer["Backend Layer"]
     backend_db["Database"]
 end
 
-user_vk <--> app_gptutor
-user_tele <--> app_telebot
 direct_api_users <--> middleware_apigw
-app_gptutor <--> middleware_apigw
+user_tele <--> app_telebot
+user_vk <--> app_gptutor
 app_telebot <--> middleware_apigw
+app_gptutor <--> middleware_apigw
 middleware_apigw <--> backend_ai
 middleware_apigw <--> backend_db
 
