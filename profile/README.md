@@ -59,7 +59,7 @@ click middleware_apigw "https://github.com/deep-assistant/api-gateway"
 ## Applications
 
 ### api-gateway
-- **Description**: A central API gateway managing requests from GPTutor, telegram-bot, and direct users to various API providers (e.g., GPT, LLM, Image, Music). It’s OpenAI-compatible and accessible at [https://api.deep-foundation.tech/v1/](https://api.deep-foundation.tech/v1/).
+- **Description**: A central API gateway managing requests from GPTutor, telegram-bot, and direct users to various API providers (e.g., GPT, LLM, Image, Music). It’s OpenAI-compatible and accessible at `https://api.deep-foundation.tech/v1/`.
 - **Technology**: Built with Node.js and Express.js for routing.
 - **Setup**: See the [api-gateway README](https://github.com/deep-assistant/api-gateway/blob/main/README.md).
 - **Quick Start**:
