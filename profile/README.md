@@ -2,13 +2,13 @@
 
 Welcome to the Deep.Assistant organization! We are dedicated to building AI-powered applications that enhance user experiences across various platforms. Our current projects include:
 
-- **[api-gateway](https://github.com/deep-assistant/api-gateway)**: A central API gateway managing backend services for our applications.
-- **[telegram-bot](https://github.com/deep-assistant/telegram-bot)**: A Telegram bot providing AI-powered assistance.
+- **[api-gateway](https://github.com/deep-assistant/api-gateway)**: A central API gateway managing backend services for our applications and direct API users.
+- **[telegram-bot](https://github.com/deep-assistant/telegram-bot)**: A Telegram bot (Deep.GPT) providing AI-powered assistance.
 - **[GPTutor](https://github.com/deep-assistant/GPTutor)**: A VK mini-app for AI-driven tutoring.
 
 ## Architecture Overview
 
-The following diagram illustrates how our applications interact with each other and the backend services. Additionally, users can directly access the API gateway for OpenAI-compatible services and more. Click on the components to visit their respective GitHub repositories.
+The following diagram illustrates how our applications interact with each other and the backend services. Users can also directly access the API gateway for OpenAI-compatible services. Click on the components to visit their GitHub repositories.
 
 ```mermaid
 graph TB
@@ -28,7 +28,7 @@ subgraph MiddlewareLayer["Middleware Layer"]
     middleware_apigw["api-gateway (Node.js, JavaScript)"]
 end
 
-subgraph backendLayer["backend Layer"]
+subgraph backendLayer["Backend Layer"]
     backend_ai["AI Model Service"]
     backend_db["Database"]
 end
@@ -46,21 +46,28 @@ click app_telebot "https://github.com/deep-assistant/telegram-bot"
 click middleware_apigw "https://github.com/deep-assistant/api-gateway"
 ```
 
+## Getting Started
+
+### For End-Users
+- **Telegram Bot (Deep.GPT)**: Start chatting with our AI-powered assistant at [https://t.me/DeepGPTBot](https://t.me/DeepGPTBot). Use `/help` for a list of commands or `/api` to get your API key.
+- **GPTutor**: Access our AI tutoring mini-app through our VK community at [http://vk.com/gptutor](http://vk.com/gptutor). Launch the app directly from the community page.
+
+### For Developers
+- **API Gateway**: Obtain an API key from [https://t.me/DeepGPTBot](https://t.me/DeepGPTBot) using `/api`, then follow the quick start guide below to integrate with our OpenAI-compatible API at [https://api.deep-foundation.tech/v1/](https://api.deep-foundation.tech/v1/).
+- **Contributing**: Clone any repository, set it up using the README instructions, and submit a pull request. See [Contributing Guidelines](#contributing) below.
+
 ## Applications
 
 ### api-gateway
-- **Description**: Serves as the central API gateway, managing requests from GPTutor, telegram-bot, and direct users to various API providers for GPT, LLM, Image, Music, and other services. It is OpenAI-compatible and accessible via `https://api.deep-foundation.tech/v1`.
-- **Technology**: Implemented in Node.js with Express.js for routing.
-- **Setup**: Detailed setup instructions can be found in the [api-gateway README](https://github.com/deep-assistant/api-gateway/blob/main/README.md).
-- **Quick Start Usage Guide**:
-  To get started with the `api-gateway`, obtain an API key from the Telegram bot at [https://t.me/DeepGPTBot](https://t.me/DeepGPTBot) by using the `/api` command. Below is a simple example in JavaScript to interact with the API:
-
+- **Description**: A central API gateway managing requests from GPTutor, telegram-bot, and direct users to various API providers (e.g., GPT, LLM, Image, Music). It’s OpenAI-compatible and accessible at [https://api.deep-foundation.tech/v1/](https://api.deep-foundation.tech/v1/).
+- **Technology**: Built with Node.js and Express.js for routing.
+- **Setup**: See the [api-gateway README](https://github.com/deep-assistant/api-gateway/blob/main/README.md).
+- **Quick Start**:
   ```js
   import OpenAI from 'openai';
 
   const openai = new OpenAI({
-    // Replace with your key from /api command from our telegram bot
-    apiKey: "YOUR_API_KEY", 
+    apiKey: "YOUR_API_KEY", // Get from /api command at https://t.me/DeepGPTBot
     baseURL: "https://api.deep-foundation.tech/v1/"
   });
 
@@ -69,31 +76,37 @@ click middleware_apigw "https://github.com/deep-assistant/api-gateway"
       messages: [{ role: 'user', content: 'Say this is a test' }],
       model: 'gpt-4o-mini',
     });
-    // Should output: "this is a test"
-    console.log(chatCompletion.choices[0].message.content);
+    console.log(chatCompletion.choices[0].message.content); // "this is a test"
   }
 
   main();
   ```
 
-  For more advanced usage (e.g., streaming responses, Whisper transcription) and a full list of available models, refer to the [detailed API documentation](https://github.com/deep-assistant/telegram-bot/blob/main/docs.md).
+- **API Documentation**: See the [API Gateway Docs](https://github.com/deep-assistant/api-gateway/blob/main/docs/API.md) for advanced usage (e.g., streaming, Whisper transcription).
 
 ### telegram-bot
-- **Description**: A Telegram bot, branded as **Deep.GPT**, that offers AI-driven assistance, processing user inputs and providing intelligent responses. [Start chatting here](https://t.me/DeepGPTBot).
-- **Technology**: Developed in Python, utilizing the python-Telegram-Bot library for Telegram API interactions.
-- **Setup**: Detailed setup instructions can be found in the [telegram-bot README](https://github.com/deep-assistant/telegram-bot/blob/main/README.md).
+- **Description**: Branded as **Deep.GPT**, this Telegram bot offers AI-driven assistance. Start chatting at [https://t.me/DeepGPTBot](https://t.me/DeepGPTBot).
+- **Technology**: Developed in Python using the python-Telegram-Bot library.
+- **Setup**: Follow the [telegram-bot README](https://github.com/deep-assistant/telegram-bot/blob/main/README.md).
+- **User Guide**: 
+  - Start: Send `/start` to begin.
+  - Help: Use `/help` for commands.
+  - API Key: Get yours with `/api`.
+  - Chat: Simply type your questions or prompts!
 
 ### GPTutor
-- **Description**: A VK mini-app, branded as **GPTutor**, that provides AI-powered tutoring services. It leverages the VK platform to reach a wide audience, particularly focusing on Russian-speaking users. [Access it through our VK community](http://vk.com/gptutor).
-- **Technology**: Built with React and Typescript, using the [vk-mini-apps-API](https://github.com/VKCOM/vk-mini-apps-api) for seamless integration with VK.
-- **Setup**: Detailed setup instructions can be found in the [GPTutor README](https://github.com/deep-assistant/GPTutor/blob/main/README.md).
+- **Description**: A VK mini-app branded as **GPTutor**, offering AI-powered tutoring, particularly for Russian-speaking users. Access it at [http://vk.com/gptutor](http://vk.com/gptutor).
+- **Technology**: Built with React and Typescript, integrated with [vk-mini-apps-API](https://github.com/VKCOM/vk-mini-apps-api).
+- **Setup**: See the [GPTutor README](https://github.com/deep-assistant/GPTutor/blob/main/README.md).
+- **User Guide**:
+  - Access: Visit [http://vk.com/gptutor](http://vk.com/gptutor) and click the app link.
+  - Use: Follow in-app prompts to ask questions or start tutoring sessions.
 
 ## Contributing
-We welcome contributions to any of our projects! Please read our [contributing guidelines](https://github.com/deep-assistant/.github/blob/main/CONTRIBUTING.md) for more information on how to get involved.
+We welcome contributions! Please read our [Contributing Guidelines](https://github.com/deep-assistant/.github/blob/main/CONTRIBUTING.md) to get involved. Steps:
+1. Fork the repository.
+2. Follow setup instructions in the README.
+3. Submit a pull request with your changes.
 
 ## License
-All projects under the Deep Assistant organization are licensed under the [Unlicense](https://unlicense.org/), allowing for maximum freedom in using and modifying the code.
-
----
-
-Thank you for visiting our organization! For more information, please explore the individual repositories or contact us via GitHub issues.
+All projects are licensed under the [Unlicense](https://unlicense.org/), granting maximum freedom to use and modify the code. Verify the license file in each repository.
