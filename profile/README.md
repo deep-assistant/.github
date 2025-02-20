@@ -53,7 +53,7 @@ click middleware_apigw "https://github.com/deep-assistant/api-gateway"
 - **GPTutor**: Access our AI tutoring mini-app through our VK community at [http://vk.com/gptutor](http://vk.com/gptutor). Launch the app directly from the community page.
 
 ### For Developers
-- **API Gateway**: Obtain an API key from [https://t.me/DeepGPTBot](https://t.me/DeepGPTBot) using `/api`, then follow the quick start guide below to integrate with our OpenAI-compatible API at [https://api.deep-foundation.tech/v1/](https://api.deep-foundation.tech/v1/).
+- **API Gateway**: Obtain an API key from [https://t.me/DeepGPTBot](https://t.me/DeepGPTBot) using `/api`, then follow the quick start guide below to integrate with our OpenAI-compatible API at `https://api.deep-foundation.tech/v1/`.
 - **Contributing**: Clone any repository, set it up using the README instructions, and submit a pull request. See [Contributing Guidelines](#contributing) below.
 
 ## Applications
