@@ -3,7 +3,7 @@
 Welcome to the Deep.Assistant organization! We are dedicated to building AI-powered applications that enhance user experiences across various platforms. Our current projects include:
 
 - **[api-gateway](https://github.com/deep-assistant/api-gateway)**: A central API gateway managing backend services for our applications.
-- **[telegrambot](https://github.com/deep-assistant/telegrambot)**: A Telegram bot providing AI-powered assistance.
+- **[telegram-bot](https://github.com/deep-assistant/telegram-bot)**: A Telegram bot providing AI-powered assistance.
 - **[GPTutor](https://github.com/deep-assistant/GPTutor)**: A VK mini-app for AI-driven tutoring.
 
 ## Architecture Overview
@@ -21,7 +21,7 @@ end
 
 subgraph ApplicationLayer["Application Layer"]
     app_gptutor["GPTutor (React, Typescript)"]
-    app_telebot["telegrambot (Python)"]
+    app_telebot["telegram-bot (Python)"]
 end
 
 subgraph MiddlewareLayer["Middleware Layer"]
@@ -42,21 +42,21 @@ middleware_apigw --> backend_ai
 middleware_apigw --> backend_db
 
 click app_gptutor "https://github.com/deep-assistant/GPTutor"
-click app_telebot "https://github.com/deep-assistant/telegrambot"
+click app_telebot "https://github.com/deep-assistant/telegram-bot"
 click middleware_apigw "https://github.com/deep-assistant/api-gateway"
 ```
 
 ## Applications
 
 ### api-gateway
-- **Description**: Serves as the central API gateway, managing requests from GPTutor, telegrambot, and direct users to various API providers for GPT, LLM, Image, Music, and other services. It is OpenAI-compatible and accessible via `https://api.deep-foundation.tech/v1`.
+- **Description**: Serves as the central API gateway, managing requests from GPTutor, telegram-bot, and direct users to various API providers for GPT, LLM, Image, Music, and other services. It is OpenAI-compatible and accessible via `https://api.deep-foundation.tech/v1`.
 - **Technology**: Implemented in Node.js with Express.js for routing.
 - **Setup**: Detailed setup instructions can be found in the [api-gateway README](https://github.com/deep-assistant/api-gateway/blob/main/README.md).
 
-### telegrambot
+### telegram-bot
 - **Description**: A Telegram bot, branded as **Deep.GPT**, that offers AI-driven assistance, processing user inputs and providing intelligent responses. [Start chatting here](https://t.me/DeepGPTBot).
 - **Technology**: Developed in Python, utilizing the python-Telegram-Bot library for Telegram API interactions.
-- **Setup**: Detailed setup instructions can be found in the [telegrambot README](https://github.com/deep-assistant/telegrambot/blob/main/README.md).
+- **Setup**: Detailed setup instructions can be found in the [telegram-bot README](https://github.com/deep-assistant/telegram-bot/blob/main/README.md).
 
 ### GPTutor
 - **Description**: A VK mini-app, branded as **GPTutor**, that provides AI-powered tutoring services. It leverages the VK platform to reach a wide audience, particularly focusing on Russian-speaking users. [Access it through or VK community](http://vk.com/gptutor).
