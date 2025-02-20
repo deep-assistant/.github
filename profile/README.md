@@ -102,6 +102,31 @@ click middleware_apigw "https://github.com/deep-assistant/api-gateway"
   - Access: Visit [http://vk.com/gptutor](http://vk.com/gptutor) and click the app link.
   - Use: Follow in-app prompts to ask questions or start tutoring sessions.
 
+## Models and Pricing
+
+Below is a list of available AI models supported by Deep.Assistant applications and the API gateway. Pricing is provided per [1K](https://en.wikipedia.org/wiki/Kilo-) tokens and per [1M](https://en.wikipedia.org/wiki/Mega-) tokens, with availability indicated for VK (GPTutor), Telegram (Deep.GPT), and API usage. Note: **1K⚡️ ≈ 0.8 RUB ≈ 0.01 USD**.
+
+| Model                   | Price per [1K](https://en.wikipedia.org/wiki/Kilo-) tokens (⚡️) | Price per [1M](https://en.wikipedia.org/wiki/Mega-) tokens (⚡️) | VK (GPTutor) | Telegram (Deep.GPT) | API |
+|-------------------------|----------------------------------------------------------------|----------------------------------------------------------------|-------------|---------------------|-----|
+| `claude-3-opus`         | 6000 ⚡️                                                        | 6 000 000 ⚡️                                                  | +           | +                   | +   |
+| `claude-3-5-sonnet`     | 1000 ⚡️                                                        | 1 000 000 ⚡️                                                  | +           | +                   | +   |
+| `claude-3-haiku`        | 100 ⚡️                                                         | 100 000 ⚡️                                                    | +           | +                   | +   |
+| `o1-preview`            | 5000 ⚡️                                                        | 5 000 000 ⚡️                                                  | +           | +                   | +   |
+| `o1-mini`               | 800 ⚡️                                                         | 800 000 ⚡️                                                    | +           | +                   | +   |
+| `gpt-4o-unofficial`     | 1100 ⚡️                                                        | 1 100 000 ⚡️                                                  | -           | +                   | +   |
+| `gpt-4o`                | 1000 ⚡️                                                        | 1 000 000 ⚡️                                                  | +           | +                   | +   |
+| `gpt-auto`              | 150 ⚡️                                                         | 150 000 ⚡️                                                    | -           | +                   | +   |
+| `gpt-4o-mini`           | 70 ⚡️                                                          | 70 000 ⚡️                                                     | +           | +                   | +   |
+| `gpt-3.5-turbo`         | 50 ⚡️                                                          | 50 000 ⚡️                                                     | +           | +                   | +   |
+| `llama3.1-405b`         | 500 ⚡️                                                         | 500 000 ⚡️                                                    | +           | +                   | +   |
+| `llama3.1-70b`          | 250 ⚡️                                                         | 250 000 ⚡️                                                    | -           | +                   | +   |
+| `llama3.1-8b`           | 20 ⚡️                                                          | 20 000 ⚡️                                                     | +           | +                   | +   |
+| `wizardlm-2-8x22b`      | 200 ⚡️                                                         | 200 000 ⚡️                                                    | +           | -                   | -   |
+| `wizardlm-2-7b`         | 20 ⚡️                                                          | 20 000 ⚡️                                                     | +           | -                   | -   |
+
+- **Notes**: Costs are based on token usage. "+" indicates availability; "-" indicates unavailability (subject to change).
+- **Updates**: For the latest on model availability or pricing, reach out via [Contributing Guidelines](#contributing) or Telegram bot at [https://t.me/DeepGPTBot](https://t.me/DeepGPTBot).
+
 ## Contributing
 We welcome contributions! Please read our [Contributing Guidelines](https://github.com/deep-assistant/.github/blob/main/CONTRIBUTING.md) to get involved. Steps:
 1. Fork the repository.
