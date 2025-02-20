@@ -8,7 +8,7 @@ Welcome to the Deep Assistant organization! We are dedicated to building AI-powe
 
 ## Architecture Overview
 
-The following diagram illustrates how our applications interact with each other and the backend services. Click on the components to visit their respective GitHub repositories or service pages.
+The following diagram illustrates how our applications interact with each other and the backend services. Click on the components to visit their respective GitHub repositories.
 
 ```mermaid
 graph TB
@@ -28,7 +28,7 @@ subgraph MiddlewareLayer["Middleware Layer"]
 end
 
 subgraph backendLayer["backend Layer"]
-    backend_ai["AI Model Service (OpenAI via Azure)"]
+    backend_ai["AI Model Service"]
     backend_db["Database"]
 end
 
@@ -38,6 +38,10 @@ app_gptutor --> middleware_apigw
 app_telebot --> middleware_apigw
 middleware_apigw --> backend_ai
 middleware_apigw --> backend_db
+
+click app_gptutor "https://github.com/deep-assistant/GPTutor"
+click app_telebot "https://github.com/deep-assistant/telegrambot"
+click middleware_apigw "https://github.com/deep-assistant/api-gateway"
 ```
 
 ## Applications
@@ -45,28 +49,17 @@ middleware_apigw --> backend_db
 ### GPTutor
 - **Description**: A VK mini-app that provides AI-powered tutoring services. It leverages the VK platform to reach a wide audience, particularly focusing on Russian-speaking users.
 - **Technology**: Built with React and Typescript, using the [vk-mini-apps-API](https://github.com/VKCOM/vk-mini-apps-api) for seamless integration with VK.
-- **Setup**:
-  1. Clone the repository: `git clone https://github.com/deep-assistant/GPTutor.git`
-  2. Install dependencies: `npm install`
-  3. Run the application: `npm start`
+- **Setup**: Detailed setup instructions can be found in the [GPTutor README](https://github.com/deep-assistant/GPTutor/blob/main/README.md).
 
 ### telegrambot
 - **Description**: A Telegram bot that offers AI-driven assistance, processing user inputs and providing intelligent responses.
 - **Technology**: Developed in Python, utilizing the python-Telegram-Bot library for Telegram API interactions.
-- **Setup**:
-  1. Clone the repository: `git clone https://github.com/deep-assistant/telegrambot.git`
-  2. Install dependencies: `pip install -r requirements.txt`
-  3. Set up your Telegram bot token in the configuration file.
-  4. Run the bot: `python bot.py`
+- **Setup**: Detailed setup instructions can be found in the [telegrambot README](https://github.com/deep-assistant/telegrambot/blob/main/README.md).
 
 ### api-gateway
-- **Description**: Serves as the central API gateway, managing requests from GPTutor and telegrambot to backend services like AI models and databases.
+- **Description**: Serves as the central API gateway, managing requests from GPTutor and telegrambot to various API providers for GPT, LLM, Image, Music, and other services.
 - **Technology**: Implemented in Node.js with Express.js for routing.
-- **Setup**:
-  1. Clone the repository: `git clone https://github.com/deep-assistant/api-gateway.git`
-  2. Install dependencies: `npm install`
-  3. Configure environment variables for Azure OpenAI and database connections.
-  4. Run the server: `npm start`
+- **Setup**: Detailed setup instructions can be found in the [api-gateway README](https://github.com/deep-assistant/api-gateway/blob/main/README.md).
 
 ## Contributing
 We welcome contributions to any of our projects! Please read our [contributing guidelines](https://github.com/deep-assistant/.github/blob/main/CONTRIBUTING.md) for more information on how to get involved.
@@ -77,3 +70,7 @@ All projects under the Deep Assistant organization are licensed under the [Unlic
 ---
 
 Thank you for visiting our organization! For more information, please explore the individual repositories or contact us via GitHub issues.
+
+---
+
+This version is shorter, with setup instructions removed and linked to each repository’s README. The Mermaid diagram now includes clickable links to the repositories, and backend services are generalized as "API providers" instead of specifying Azure OpenAI.
