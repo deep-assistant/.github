@@ -82,7 +82,7 @@ click middleware_apigw "https://github.com/deep-assistant/api-gateway"
   main();
   ```
 
-- **API Documentation**: See the [API Gateway Docs](https://github.com/deep-assistant/api-gateway/blob/main/docs/API.md) for advanced usage (e.g., streaming, Whisper transcription).
+- **API Documentation**: See the [API Gateway Docs](https://github.com/deep-assistant/telegram-bot/blob/main/docs.md) for advanced usage (e.g., streaming, Whisper transcription).
 
 ### telegram-bot
 - **Description**: Branded as **Deep.GPT**, this Telegram bot offers AI-driven assistance. Start chatting at [https://t.me/DeepGPTBot](https://t.me/DeepGPTBot).
