@@ -104,7 +104,9 @@ click middleware_apigw "https://github.com/deep-assistant/api-gateway"
 
 ## Models and Pricing
 
-Below is a list of available AI models supported by Deep.Assistant applications and the API gateway. Pricing is provided per [1K](https://en.wikipedia.org/wiki/Kilo-) tokens and per [1M](https://en.wikipedia.org/wiki/Mega-) tokens, with availability indicated for VK (GPTutor), Telegram (Deep.GPT), and API usage. Note: **1K⚡️ ≈ 0.8 RUB ≈ 0.01 USD**.
+Below is a list of available AI models supported by Deep.Assistant applications and the API gateway. Pricing is provided per [1K](https://en.wikipedia.org/wiki/Kilo-) tokens and per [1M](https://en.wikipedia.org/wiki/Mega-) tokens, with availability indicated for VK (GPTutor), Telegram (Deep.GPT), and API usage. 
+
+Note: **1K⚡️ ≈ 0.8 RUB ≈ 0.01 USD**.
 
 | Model                   | ⚡️ per [1K](https://en.wikipedia.org/wiki/Kilo-) tokens | ⚡️ per [1M](https://en.wikipedia.org/wiki/Mega-) tokens | VK (GPTutor) | Telegram (Deep.GPT) | API |
 |-------------------------|----------------------------------------------------------------|----------------------------------------------------------------|-------------|---------------------|-----|
