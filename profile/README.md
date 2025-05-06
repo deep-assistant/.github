@@ -131,10 +131,10 @@ Note: **1K⚡️ ≈ 0.8 RUB ≈ 0.01 USD**.
 | `wizardlm-2-7b`         | 20 ⚡️                                                          | 20 000 ⚡️                                                     | +           | -                   | -   |
 
 - **Notes**: Costs are based on token usage. "+" indicates availability; "-" indicates unavailability (subject to change).
-- **Updates**: For the latest on model availability or pricing, reach out via [Contributing Guidelines](#contributing) or Telegram bot at [https://t.me/DeepGPTBot](https://t.me/DeepGPTBot).
+- **Updates**: For the latest on model availability or pricing, reach out via Telegram bot at [https://t.me/DeepGPTBot](https://t.me/DeepGPTBot).
 
 ## Contributing
-We welcome contributions! Please read our [Contributing Guidelines](https://github.com/deep-assistant/.github/blob/main/CONTRIBUTING.md) to get involved. Steps:
+We welcome contributions! Steps:
 1. Fork the repository.
 2. Follow setup instructions in the README.
 3. Submit a pull request with your changes.
