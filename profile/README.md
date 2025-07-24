@@ -53,13 +53,13 @@ click middleware_apigw "https://github.com/deep-assistant/api-gateway"
 - **GPTutor**: Access our AI tutoring mini-app through our VK community at [http://vk.com/gptutor](http://vk.com/gptutor). Launch the app directly from the community page.
 
 ### For Developers
-- **API Gateway**: Obtain an API key from [https://t.me/DeepGPTBot](https://t.me/DeepGPTBot) using `/api`, then follow the quick start guide below to integrate with our OpenAI-compatible API at `https://api.deep-foundation.tech/v1/`.
+- **API Gateway**: Obtain an API key from [https://t.me/DeepGPTBot](https://t.me/DeepGPTBot) using `/api`, then follow the quick start guide below to integrate with our OpenAI-compatible API at `https://api.deep.assistant.run.place/v1/`.
 - **Contributing**: Clone any repository, set it up using the README instructions, and submit a pull request. See [Contributing Guidelines](#contributing) below.
 
 ## Applications
 
 ### api-gateway
-- **Description**: A central API gateway managing requests from GPTutor, telegram-bot, and direct users to various API providers (e.g., GPT, LLM, Image, Music). It’s OpenAI-compatible and accessible at `https://api.deep-foundation.tech/v1/`.
+- **Description**: A central API gateway managing requests from GPTutor, telegram-bot, and direct users to various API providers (e.g., GPT, LLM, Image, Music). It's OpenAI-compatible and accessible at `https://api.deep.assistant.run.place/v1/`.
 - **Technology**: Built with Node.js and Express.js for routing.
 - **Setup**: See the [api-gateway README](https://github.com/deep-assistant/api-gateway/blob/main/README.md).
 - **Quick Start**:
@@ -68,7 +68,7 @@ click middleware_apigw "https://github.com/deep-assistant/api-gateway"
 
   const openai = new OpenAI({
     apiKey: "YOUR_API_KEY", // Get from /api command at https://t.me/DeepGPTBot
-    baseURL: "https://api.deep-foundation.tech/v1/"
+    baseURL: "https://api.deep.assistant.run.place/v1/"
   });
 
   async function main() {
