@@ -90,6 +90,8 @@ click middleware_apigw "https://github.com/deep-assistant/api-gateway"
 
   main();
   ```
+  
+  → [Complete JavaScript Example](https://github.com/deep-assistant/api-tester/tree/main/examples/javascript) - Full setup with package.json, dependencies, and instructions
 
   **Python:**
   ```python
@@ -118,6 +120,8 @@ click middleware_apigw "https://github.com/deep-assistant/api-gateway"
   if __name__ == "__main__":
       main()
   ```
+  
+  → [Complete Python Example](https://github.com/deep-assistant/api-tester/tree/main/examples/python) - Full setup with requirements.txt, dependencies, and instructions
 
 - **API Documentation**: See the [API Gateway Docs](https://github.com/deep-assistant/telegram-bot/blob/main/docs.md) for advanced usage (e.g., streaming, Whisper transcription).
 
