@@ -63,23 +63,60 @@ click middleware_apigw "https://github.com/deep-assistant/api-gateway"
 - **Technology**: Built with Node.js and Express.js for routing.
 - **Setup**: See the [api-gateway README](https://github.com/deep-assistant/api-gateway/blob/main/README.md).
 - **Quick Start**:
+
+  **JavaScript:**
   ```js
   import OpenAI from 'openai';
+  import dotenv from 'dotenv';
+
+  // Load environment variables from .env file
+  dotenv.config();
+
+  const OPENAI_API_KEY = process.env.OPENAI_API_KEY || "YOUR_API_KEY"; // Get from /api command at https://t.me/DeepGPTBot
+  const OPENAI_API_BASE = process.env.OPENAI_BASE_URL || process.env.OPENAI_API_BASE || "https://api.deep.assistant.run.place/v1/";
 
   const openai = new OpenAI({
-    apiKey: "YOUR_API_KEY", // Get from /api command at https://t.me/DeepGPTBot
-    baseURL: "https://api.deep.assistant.run.place/v1/"
+    apiKey: OPENAI_API_KEY,
+    baseURL: OPENAI_API_BASE
   });
 
   async function main() {
     const chatCompletion = await openai.chat.completions.create({
-      messages: [{ role: 'user', content: 'Say this is a test' }],
+      messages: [{ role: 'user', content: 'Hi' }],
       model: 'gpt-4o-mini',
     });
-    console.log(chatCompletion.choices[0].message.content); // "this is a test"
+    console.log(chatCompletion.choices[0].message.content);
   }
 
   main();
+  ```
+
+  **Python:**
+  ```python
+  import os
+  from openai import OpenAI
+  from dotenv import load_dotenv
+
+  # Load environment variables from .env file
+  load_dotenv()
+
+  OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "YOUR_API_KEY")  # Get from /api command at https://t.me/DeepGPTBot
+  OPENAI_API_BASE = os.getenv("OPENAI_BASE_URL") or os.getenv("OPENAI_API_BASE", "https://api.deep.assistant.run.place/v1/")
+
+  client = OpenAI(
+      api_key=OPENAI_API_KEY,
+      base_url=OPENAI_API_BASE
+  )
+
+  def main():
+      chat_completion = client.chat.completions.create(
+          messages=[{"role": "user", "content": "Hi"}],
+          model="gpt-4o-mini",
+      )
+      print(chat_completion.choices[0].message.content)
+
+  if __name__ == "__main__":
+      main()
   ```
 
 - **API Documentation**: See the [API Gateway Docs](https://github.com/deep-assistant/telegram-bot/blob/main/docs.md) for advanced usage (e.g., streaming, Whisper transcription).
