@@ -8,7 +8,7 @@ Welcome to the Deep.Assistant organization! We are dedicated to building AI-powe
 
 ## Architecture Overview
 
-The following diagram illustrates how our applications interact with each other and the backend services. Users can also directly access the API gateway for OpenAI-compatible services. Click on the components to visit their GitHub repositories.
+The following diagram illustrates how our applications interact with each other and the backend services. Users can also directly access the API gateway for OpenAI-compatible services. Click on the components to view their detailed architecture documentation.
 
 ```mermaid
 graph TB
@@ -41,9 +41,9 @@ app_gptutor <--> middleware_apigw
 middleware_apigw <--> backend_ai
 middleware_apigw <--> backend_db
 
-click app_gptutor "https://github.com/deep-assistant/GPTutor"
-click app_telebot "https://github.com/deep-assistant/telegram-bot"
-click middleware_apigw "https://github.com/deep-assistant/api-gateway"
+click app_gptutor "https://github.com/deep-assistant/GPTutor/blob/main/ARCHITECTURE.md"
+click app_telebot "https://github.com/deep-assistant/telegram-bot/blob/main/ARCHITECTURE.md"
+click middleware_apigw "https://github.com/deep-assistant/api-gateway/blob/main/ARCHITECTURE.md"
 ```
 
 ## Getting Started
